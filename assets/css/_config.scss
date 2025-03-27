@@ -24,14 +24,15 @@
 
 body {
   line-height: 1.8;
-  color: #1C1C1C;
+  color: #FFF;
   font-family: "Shippori Mincho", serif;
+  background-color: #1C1C1C;
 
 }
 
 p {
   font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
-  color: #1C1C1C;
+  color: #FFF;
 
 }
 
@@ -40,7 +41,7 @@ a {
   @include tab{
   font-size: 14px;
   }
-  color: #1C1C1C;
+  color: #FFF;
 
   &:hover {
     cursor: pointer;

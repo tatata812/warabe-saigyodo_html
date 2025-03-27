@@ -29,8 +29,8 @@ header
   top: 0;
   width: 100%;
   transition: transform 0.3s;
-  background:rgba(255, 255, 255, 1);
   height: 58px;
+  background:  #000000;
 
   @include tab {
     height: 50px;
@@ -52,11 +52,12 @@ header
     margin: 0 auto;
     gap: 24px;
     padding: 4px 16px;
-
+    height: 58px;
 
     @include tab {
       justify-content: space-between;
       padding: 4px 0;
+      height: 50px;
 
     }
   }
@@ -64,11 +65,11 @@ header
 
   &__ttl-wrap {
     padding: 0 0 0 3%;
-    max-width: 100px;
+    max-width: 200px;
     margin: 0 auto 0 0;
 
     @include tab {
-      max-width: 70px;
+      max-width: 160px;
     }
   }
 
@@ -88,7 +89,9 @@ header
     }
   }
 
-  &__menu {}
+  &__menu {
+    color: #fff;
+  }
 
   &__btn-wrap {
     display: none;
@@ -136,7 +139,7 @@ header
   top: -4px;
   right: 0;
   padding: 80px 40px 0;
-  background-color: #fff;
+  background:  #000000;
   height: 100vh;
   width: 80%;
 
@@ -169,6 +172,7 @@ header
   &__link-item {
     display: flex;
     gap: 10px;
+    color: #fff;
 
 
     img {
@@ -187,6 +191,13 @@ header
     align-items: flex-end;
     gap: 8px;
     margin: 0 0 24px;
+   
+
+
+  }
+
+  &__menu-item {
+    color: #fff;
 
   }
 }
@@ -197,41 +208,65 @@ header
  ================================= */
 // メインビジュアル
 .main-visual {
+  padding: 80px 12px;
+  text-align: center;
+
+  @include tab{
+  text-align: left;
+  padding: 24px 12px;
+
+  }
   
 
-  &__video {
+  &__top-text {
+    font-size: 36px;
+    margin: 0 0 40px;
 
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -1;
-    background-color: #1C1C1C;
+    @include tab{
+      text-align: center;
+      font-size: 24px;
+      margin: 0 0 24px;
 
-    video {
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      }
+
+  }
+
+  &__img {
+    max-width: 200px;
+    margin: 0 auto 64px;
+
+    @include tab{
+      max-width: 120px;
+      margin: 0 auto 32px;
+
     }
   }
 
-  &__text {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__bottom-text {
+    font-size: 28px;
+    margin: 0 0 64px;
 
-    p {
-      color: #fff;
+    @include tab{
+      font-size: 22px;
+      margin: 0 0 32px;
+      text-align: center;
+  
     }
   }
+
+  &__lead-text {
+    margin: 0 0 24px;
+  
+
+    @include tab{
+      margin: 0 auto 24px;
+      max-width: 260px;
+    }
+
+  }
+
+  &__ {}
+
 }
 
 
