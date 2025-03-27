@@ -1,0 +1,246 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>わらべグループ</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <div class="black-bg"></div>
+
+  <header>
+    <div class="header">
+      <div class="header__inner">
+        <h1 class="header__ttl-wrap header__item"><a href="index.html" class="header__ttl"><img
+              src="assets/img/top/logo.png" alt=""></a>
+        </h1>
+        <nav class="header__menu-wrap header__item">
+          <div class="header__menu-inner">
+            <a href="" class="header__menu">わらべ菜魚洞</a>
+            <a href="" class="header__menu">こじまわらべ</a>
+            <!-- <a href="" class="header__menu">お弁当</a> -->
+            <a href="" class="header__menu">ブログ</a>
+            <a href="company.html" class="header__menu">会社概要・採用情報</a>
+          </div>
+        </nav>
+      </div>
+      <div class="header-btn-wrap">
+        <div class="header-btn-wrap__btn-img" id="js-hamburger-menu">
+          <img src="assets/img/top/hun-btn.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu">
+          <a href="" class="header-sp__menu-item">わらべ菜魚洞</a>
+          <a href="" class="header-sp__menu-item">こじまわらべ</a>
+          <!-- <a href="" class="header-sp__menu-item">お弁当</a> -->
+          <a href="" class="header-sp__menu-item">ブログ</a>
+          <a href="company.html" class="header-sp__menu-item">会社概要・採用情報</a>
+          <!-- <a href="" class="header-sp__menu-item">個人情報保護方針</a>
+          <a href="" class="header-sp__menu-item">サイトマップ</a> -->
+        </div>
+        <div class="header-sp__link">
+          <a href=""  class="header-sp__link-item"><img src="assets/img/top/header-insta.png" alt="Instagramロゴ"><span>わらべ菜魚洞公式</span></a>
+          <a href=""  class="header-sp__link-item"><img src="assets/img/top/header-insta.png" alt="Instagramロゴ"><span>こじまわらべ公式</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main page-top">
+    <div class="main-visual">
+      <div class="main-visual__text">
+        <!-- <p class="sub-copy">わらべグループ</p> -->
+        <p><img src="assets/img/top/footer-logo.png" alt="" style="width: 100px;"></p>
+      </div>
+      <div class="main-visual__video">
+        <video src="assets/img/top/top-video-demo.mp4" autoplay loop muted playsinline></video>
+      </div>
+    </div>
+
+    <section class="top-history section-style">
+      <h2 class="ttl-style fadein-anime">小田原漁港と共に<br class="sp-block">歩んできた、50年間。</h2>
+      <div class="top-history__img">
+        <img src="assets/img/top/top-history01.jpg" alt="こじま食堂">
+      </div>
+      <p class="top-history__text">昭和48年（1973年）、 こじま食堂が営業開始。<br>
+        小田原漁港にほとんど飲食店が無かった時代から、<br class="pc-block">
+        小田原漁港随一の魚料理食堂として、一時代を築きました。</p>
+      <div class="top-history__img">
+        <img src="assets/img/top/top-history02.jpg" alt="わらべ菜魚洞">
+      </div>
+      <p class="top-history__text">その後、25年。平成11年（1999年）にわらべ菜魚洞がオープン。<br>
+        両店は新鮮な地魚が食べられる小田原港の料理店の先駆けとして共に満席で賑わう人気店として、<br class="pc-block">
+        切磋琢磨し併存してきました。</p>
+      <div class="top-history__img">
+        <img src="assets/img/top/top-history03.jpg" alt="こじまわらべ">
+      </div>
+      <p class="top-history__text">2021年秋、こじま食堂は惜しまれつつ閉店しますが、明ける2022年、<br class="pc-block">
+        わらべがこじまの跡地に店を再生させるべく<br class="pc-block">
+        「こじまわらべ」が誕生。わらべの二号店であるだけにとどまらず、<br class="pc-block">
+        港のランドマークこじまの名を継ぎました。</p>
+    </section>
+
+    <section class="top-about">
+      <h2 class="ttl-style fadein-anime">わらべが美味しい理由</h2>
+      <div class="top-about__box">
+        <div class="top-about__img fadein-anime02">
+          <img src="assets/img/top/top-about02.jpg" alt="わらべが美味しい理由">
+        </div>
+        <div class="top-about__text-wrap">
+          <p class="top-about__text">朝獲れ新鮮。<br>
+            小田原魚市場で、毎朝新鮮な魚を買い付け。</p>
+        </div>
+      </div>
+      <div class="top-about__box">
+        <div class="top-about__text-wrap">
+          <p class="top-about__text">魚に合わせた<br>
+            一番おいしい食べ方をご提供。</p>
+        </div>
+        <div class="top-about__img top-about__img--order fadein-anime02">
+          <img src="assets/img/top/top-about02.jpg" alt="わらべが美味しい理由">
+        </div>
+      </div>
+      <div class="top-about__box">
+        <div class="top-about__img  fadein-anime02">
+          <img src="assets/img/top/top-about03.jpg" alt="わらべが美味しい理由">
+        </div>
+        <div class="top-about__text-wrap">
+          <p class="top-about__text">こだわりの食材を、<br>
+            職人技でもっと美味しく。</p>
+        </div>
+      </div>
+      <p class="top-about__bottom-text">小田原の新鮮な地魚と、新潟の契約農家さんから仕入れたお米を、<br class="pc-block">
+        職人の技術で至福の料理に仕上げる。<br>
+        わらべでしか味わえない感動をご提供いたします</p>
+    </section>
+
+
+    <section class="top-store">
+      <h2 class="ttl-style fadein-anime">贅沢な時間は、漁港にある。</h2>
+      <p class="top-store__lead">お客様の食の感動を引き立てるため、店舗空間にもこだわりあり。<br>
+        松本デザイナー監修のモダンな店舗デザインで、イメージを刷新。<br>
+        五感で贅沢に、魚料理を味わえます。</p>
+      <div class="top-store__box">
+        <div class="top-store__item">
+          <h3 class="top-store__item-ttl">わらべ菜魚洞</h3>
+          <div class="top-store__item-img fadein-anime02">
+            <img src="assets/img/top/top-store01.jpg" alt="わらべ菜魚洞 店舗写真">
+          </div>
+          <div class="top-store__item-img fadein-anime02">
+            <img src="assets/img/top/top-store02.jpg" alt="わらべ菜魚洞 店舗写真">
+          </div>
+          <div class="top-store__item-img fadein-anime02">
+            <img src="assets/img/top/top-store03.jpg" alt="わらべ菜魚洞 店舗写真">
+          </div>
+          <a href="#"  class="top-store__link"><img src="assets/img/top/top-store-link.png" alt="View more"></a>
+        </div>
+        <div class="top-store__item">
+          <h3 class="top-store__item-ttl">こじまわらべ</h3>
+          <div class="top-store__item-img fadein-anime02">
+            <img src="assets/img/top/top-store04.jpg" alt="こじまわらべ 店舗写真">
+          </div>
+          <div class="top-store__item-img fadein-anime02">
+            <img src="assets/img/top/top-store05.jpg" alt="こじまわらべ 店舗写真">
+          </div>
+          <div class="top-store__item-img fadein-anime02">
+            <img src="assets/img/top/top-store06.jpg" alt="こじまわらべ 店舗写真">
+          </div>
+          <a href="#"  class="top-store__link"><img src="assets/img/top/top-store-link.png" alt="View more"></a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="top-insta">
+      <div class="top-insta__inner">
+      
+        <h2 class="ttl-style fadein-anime">最新の営業状況</h2>
+        <h3 class="top-insta__sub-ttl">わらべ菜魚洞</h3>
+        <div class="top-insta__box">
+          
+        </div>
+        <h3 class="top-insta__sub-ttl">こじまわらべ</h3>
+        <div class="top-insta__box">
+      </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="loading-anime-wrap">
+    <p class="loading-anime-text">わらべグループ</p>
+    <div class="loading-anime-line"></div>
+  </div>
+  <!--main end-->
+
+
+  <footer class="footer">
+      <a class="footer__logo">
+        <img src="assets/img/top/footer-logo.png" alt="わらべ">
+      </a>
+      <div class="footer__link">
+        <a href=""  class="footer__link-item"><img src="assets/img/top/footer-insta.png" alt="Instagramロゴ"><span>わらべ菜魚洞公式</span></a>
+        <a href=""  class="footer__link-item"><img src="assets/img/top/footer-insta.png" alt="Instagramロゴ"><span>こじまわらべ公式</span></a>
+      </div>
+      <div class="footer__menu">
+        <a href="" class="footer__menu-item">わらべ菜魚洞</a>
+        <a href="" class="footer__menu-item">こじまわらべ</a>
+        <!-- <a href="" class="footer__menu-item">お弁当</a> -->
+        <a href="" class="footer__menu-item">ブログ</a>
+        <a href="company.html" class="footer__menu-item">会社概要・採用情報</a>
+        <a href="privacy.html" class="footer__menu-item">個人情報保護方針</a>
+        <a href="sitemap.html" class="footer__menu-item">サイトマップ</a>
+      </div>
+      <div class="footer__bottom">
+        &copy;Warabe Co., Ltd All Rights Reserved.
+      </div>
+
+  </footer>
+  <div class="follow-btn follow-btn-js">
+    <a href="#" class="follow-btn__item"><img src="assets/img/top/follow-btn01.png" alt="わらべ菜魚洞" /></a>
+    <a href="#" class="follow-btn__item"><img src="assets/img/top/follow-btn02.png" alt="こじまわらべ" /></a>
+  </div>
+  
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
+</html>

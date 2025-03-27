@@ -1,0 +1,214 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>会社概要・採用情報 </title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <div class="black-bg"></div>
+
+  <header>
+    <div class="header">
+      <div class="header__inner">
+        <h1 class="header__ttl-wrap header__item"><a href="index.html" class="header__ttl"><img
+              src="assets/img/top/logo.png" alt=""></a>
+        </h1>
+        <nav class="header__menu-wrap header__item">
+          <div class="header__menu-inner">
+            <a href="" class="header__menu">わらべ菜魚洞</a>
+            <a href="" class="header__menu">こじまわらべ</a>
+            <!-- <a href="" class="header__menu">お弁当</a> -->
+            <a href="" class="header__menu">ブログ</a>
+            <a href="company.html" class="header__menu">会社概要・採用情報</a>
+          </div>
+        </nav>
+      </div>
+      <div class="header-btn-wrap">
+        <div class="header-btn-wrap__btn-img" id="js-hamburger-menu">
+          <img src="assets/img/top/hun-btn.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu">
+          <a href="" class="header-sp__menu-item">わらべ菜魚洞</a>
+          <a href="" class="header-sp__menu-item">こじまわらべ</a>
+          <!-- <a href="" class="header-sp__menu-item">お弁当</a> -->
+          <a href="" class="header-sp__menu-item">ブログ</a>
+          <a href="" class="header-sp__menu-item">会社概要・採用情報</a>
+          <!-- <a href="" class="header-sp__menu-item">個人情報保護方針</a>
+            <a href="" class="header-sp__menu-item">サイトマップ</a> -->
+        </div>
+        <div class="header-sp__link">
+          <a href="" class="header-sp__link-item"><img src="assets/img/top/header-insta.png"
+              alt="Instagramロゴ"><span>わらべ菜魚洞公式</span></a>
+          <a href="" class="header-sp__link-item"><img src="assets/img/top/header-insta.png"
+              alt="Instagramロゴ"><span>こじまわらべ公式</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main page-company subpage">
+    <div class="subpage__main-visual">
+      <img src="assets/img/subpage/company-mv.jpg" alt="会社概要・採用情報" class="pc-block">
+      <img src="assets/img/subpage/company-mv-sp.jpg" alt="会社概要・採用情報" class="sp-block">
+    </div>
+    <section class="outline">
+      <h1 class="ttl-style"><span>Outline</span>会社概要</h1>
+      <div class="outline__table-wrap">
+
+        <table class="outline__table">
+            <tr>
+              <th>会社名</th>
+              <td>有限会社 わらべ</td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td>〒250-0021　<br class="sp-block">神奈川県小田原市早川1-5-4</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>片桐 岳彦</td>
+            </tr>
+            <tr>
+              <th>本店</th>
+              <td>わらべ菜魚洞<br>
+                小田原市早川1-5-4<br>
+                <a href="tel:0465-22-4858">0465-22-4858</a></td>
+            </tr>
+            <tr>
+              <th>二号店</th>
+              <td>こじまわらべ<br>
+                小田原市早川1-13-18<br>
+                <a href="tel:0465-20-8062">0465-20-8062</a></td>
+            </tr>
+        </table>
+      </div>
+
+    </section>
+
+    <section class="philosophy">
+      <h1 class="ttl-style ttl-style--white fadein-anime"><span>Philosophy</span>理念</h1>
+      <p class="philosophy__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+    </section>
+
+    <section class="recruit">
+      <h1 class="ttl-style fadein-anime"><span>Recruit</span>採用情報</h1>
+
+    </section>
+    <section class="form">
+      <h1 class="ttl-style fadein-anime"><span>Application form</span>応募フォーム</h1>
+      <div class="form__table-wrap">
+        <table class="form__table">
+          <tr>
+            <th>氏名</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>年齢</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th>性別</th>
+            <td><label><input type="radio" name="2">男性</label>
+              <label><input type="radio" name="2">女性</label></td>
+          </tr>
+          <tr>
+            <th>備考</th>
+            <td><textarea id="message" name="message"　cols="50" rows="10"></textarea></td>
+          </tr>
+      </table>
+      <p class="form__link-text"><a href="" class="form__link">個人情報保護方針</a>をご確認の上、「同意する」にチェックを入れてください。</p>
+      <div class="form__check-wrap">
+        <input type="checkbox">同意する
+      
+      </div>
+      <input type="submit" value="送信">
+      </div>
+
+
+    </section>
+
+  </div>
+
+  <!--main end-->
+  <footer class="footer">
+    <a class="footer__logo">
+      <img src="assets/img/top/footer-logo.png" alt="わらべ">
+    </a>
+    <div class="footer__link">
+      <a href="" class="footer__link-item"><img src="assets/img/top/footer-insta.png"
+          alt="Instagramロゴ"><span>わらべ菜魚洞公式</span></a>
+      <a href="" class="footer__link-item"><img src="assets/img/top/footer-insta.png"
+          alt="Instagramロゴ"><span>こじまわらべ公式</span></a>
+    </div>
+    <div class="footer__menu">
+      <a href="" class="footer__menu-item">わらべ菜魚洞</a>
+      <a href="" class="footer__menu-item">こじまわらべ</a>
+      <!-- <a href="" class="footer__menu-item">お弁当</a> -->
+      <a href="" class="footer__menu-item">ブログ</a>
+      <a href="" class="footer__menu-item">会社概要・採用情報</a>
+      <a href="privacy.html" class="footer__menu-item">個人情報保護方針</a>
+      <a href="" class="footer__menu-item">サイトマップ</a>
+    </div>
+    <div class="footer__bottom">
+      &copy;Warabe Co., Ltd All Rights Reserved.
+    </div>
+
+  </footer>
+  <div class="follow-btn follow-btn-js">
+    <a href="#" class="follow-btn__item"><img src="assets/img/top/follow-btn01.png" alt="わらべ菜魚洞" /></a>
+    <a href="#" class="follow-btn__item"><img src="assets/img/top/follow-btn02.png" alt="こじまわらべ" /></a>
+  </div>
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
+</html>

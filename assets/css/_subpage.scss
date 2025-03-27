@@ -1,0 +1,633 @@
+@mixin sp {
+  @media (max-width:(600px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(820px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+
+
+
+
+/* =================================
+会社概要・採用情報
+ ================================= */
+
+ .page-company {
+
+
+}
+
+
+.outline {
+  padding: 0 12px 80px;
+
+  @include tab{
+    padding: 0 12px 48px;
+  }
+
+  &__table-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  &__table {
+    width: 100%;
+
+    tr {
+      border-top: 1px solid #1C1C1C;
+
+      &:last-child {
+        border-bottom: 1px solid #1C1C1C;
+
+      }
+    }
+
+    th {
+      text-align: left;
+      padding: 12px 2px;
+      font-weight: 100;
+    }
+
+    td {
+      text-align: left;
+      padding: 12px 2px;
+    }
+
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+.philosophy {
+  padding: 80px 12px;
+  background-color: #1C1C1C;
+
+  @include tab{
+    padding: 48px 12px 48px;
+  }
+
+  &__text {
+    max-width: 740px;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+.recruit {
+
+  padding: 80px 12px;
+
+  @include tab{
+    padding: 48px 12px 48px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+
+.form {
+
+  padding: 80px 12px;
+
+  @include tab{
+    padding: 48px 12px 48px;
+  }
+
+
+
+  &__table-wrap {
+    max-width: 720px;
+    margin: 0 auto ;
+  }
+
+  &__table {
+    width: 100%;
+    margin: 0 0 40px;
+    
+
+    tr {
+
+    }
+
+    th {
+      text-align: left;
+      padding: 12px 2px;
+      font-weight: 100;
+      width: 140px;
+      
+     
+
+      @include tab{
+      display: block;
+      width: 100%;
+      padding: 12px 2px 0;
+
+      }
+    }
+
+    td {
+      text-align: left;
+      padding: 12px 2px;
+      vertical-align: top;
+
+
+      @include tab{
+        display: block;
+        padding: 0 0 12px;
+
+      }
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 4px;
+    }
+
+    input[type="radio"] {
+      vertical-align: baseline;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 4px;
+    }
+
+
+
+
+
+  }
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__link-text {
+    text-align: center;
+    font-size: 13px;
+    margin: 0 0 16px;
+  }
+
+  input[type="submit"] {
+    background-color: #1C1C1C;
+    color: #fff;
+    width: 160px;
+    padding: 8px;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.5s;
+
+
+    &:hover {
+      background-color: #fff;
+      color: #1C1C1C;
+      cursor: pointer;
+
+    }
+  }
+
+  &__check-wrap {
+    text-align: center;
+    margin: 0 0 40px;
+  }
+
+  input[type="checkbox"] {
+    vertical-align: inherit;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+
+
+/* =================================
+お問い合わせ
+ ================================= */
+
+.page-contact {
+
+  &__ttl {
+    max-width: 1220px;
+    margin: 0 auto;
+    font-size: 22px;
+    color: #44a136;
+    padding: 12px 12px 12px 60px;
+
+    @include tab {
+      font-size: 20px;
+      padding: 10px 12px 10px 24px;
+
+
+    }
+  }
+
+  &__section {
+    background-color: #f8fbf2;
+    padding: 40px 12px 80px;
+
+    @include sp {
+      padding: 40px 12px;
+
+    }
+  }
+
+  &__section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin: 0 0 40px;
+
+    span {
+      color: #ed1c24;
+    }
+  }
+
+  &__form-wrap {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 0 0 40px;
+
+    @include tab {
+      padding: 12px;
+    }
+  }
+
+  &__form-table {
+    width: 100%;
+
+    th {
+      text-align: left;
+      color: #44a136;
+      padding: 14px 0 24px;
+      width: 280px;
+      vertical-align: top;
+
+      @include pc {
+        width: 180px;
+      }
+
+      @include tab {
+        width: 100%;
+        display: block;
+        padding: 16px 0 2px;
+
+
+      }
+
+      span {
+        color: #ed1c24;
+        display: inline-block;
+        margin: 0 0 0 8px;
+      }
+    }
+
+    td {
+      padding: 16px 0 0;
+      @include tab {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &__input {
+    border: #44a136 1px solid;
+    width: 100%;
+    padding: 8px;
+
+  }
+
+  &__textarea {
+    border: #44a136 1px solid;
+    width: 100%;
+    padding: 8px;
+
+  }
+
+  &__bottom-text {
+    text-align: center;
+    margin: 0 0 12px;
+  }
+
+  &__last-text-link {
+    color: #158ecf;
+    text-decoration: underline;
+  }
+
+  &__checkbox-wrap {
+    text-align: center;
+    margin: 0 0 40px;
+
+    label {
+      color: #44a136;
+    }
+  }
+
+  &__checkbox {}
+
+  &__btn-wrap {
+    position: relative;
+    width: 200px;
+
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      margin-top: -6px;
+    }
+
+  }
+
+  &__btn {
+    width: 200px;
+  }
+
+
+
+}
+
+
+
+
+/* =================================
+お知らせ
+ ================================= */
+
+.page-information {
+
+  &__date {
+    font-size: 12px;
+    color: #ababab;
+    margin: 0 0 0 24px;
+
+    @include sp{
+    display: block;
+    margin: 0;
+
+    }
+  }
+
+  hr {
+    margin: 0;
+  }
+
+  &__content {
+    padding: 32px 12px;
+
+    @include sp{
+      padding: 12px 8px;
+
+    }
+  }
+
+  &__bottom-hr {
+     margin: 0 0 40px!important;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
