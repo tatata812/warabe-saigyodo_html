@@ -29,17 +29,19 @@
     margin: 0 auto;
 
     @include tab {
-      padding: 40px 0px;
+      padding: 24px 0px;
 
     }
   }
 
   &__item {
     display: flex;
-    margin: 0 0 60px;
+    margin: 0 0 100px;
 
     @include tab {
       flex-direction: column;
+      margin: 0 0 32px;
+
     }
   }
 
@@ -63,10 +65,21 @@
   &__item-ttl {
     font-size: 28px;
     margin: 0 0 40px;
+
+    @include tab{
+      margin: 0 0 24px;
+      font-size: 24px;
+
+    }
   }
 
   &__item-ttl-lead {
     margin: -36px 0 40px;
+
+    @include tab{
+      margin: -24px 0 40px;
+
+    }
   }
 
   &__menu-name {
@@ -79,8 +92,10 @@
 
     &--no-margin {
       margin: 0;
+    }
 
-
+    @include tab{
+      margin: 0 0 24px;
 
     }
   }
