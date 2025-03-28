@@ -38,9 +38,11 @@ p {
 
 a {
   font-size: 16px;
-  @include tab{
-  font-size: 14px;
+
+  @include tab {
+    font-size: 14px;
   }
+
   color: #FFF;
 
   &:hover {
@@ -65,16 +67,17 @@ li {
   list-style: none;
   font-size: 16px;
 
-  @include tab{
-  font-size: 14px;
+  @include tab {
+    font-size: 14px;
   }
 }
 
-th,td {
+th,
+td {
   font-size: 16px;
 
-  @include tab{
-  font-size: 14px;
+  @include tab {
+    font-size: 14px;
   }
 }
 
@@ -115,7 +118,7 @@ th,td {
   margin: 0 0 80px;
   font-size: clamp(1.375rem, 1.057rem + 1.59vw, 2.25rem);
 
-  @include tab{
+  @include tab {
     margin: 0 0 32px;
   }
 
@@ -123,9 +126,9 @@ th,td {
     display: block;
     font-size: 20px;
 
-    @include tab{
+    @include tab {
       font-size: 16px;
-  
+
     }
   }
 
@@ -150,7 +153,7 @@ th,td {
 
     margin: 0 0 120px;
 
-    @include tab{
+    @include tab {
       margin: 0 0 40px;
     }
   }
@@ -167,6 +170,25 @@ th,td {
   &__box {
     max-width: 880px;
     margin: 0 auto;
+  }
+
+  &__lead-wrap {
+    padding: 0 12px;
+  }
+
+  &__lead {
+    text-align: center;
+
+    @include tab {
+      margin: 0 auto 24px;
+      max-width: 360px;
+      text-align: left;
+    }
+
+    &--margin {
+      margin: 0 auto 24px;
+
+    }
   }
 }
 
@@ -186,7 +208,7 @@ th,td {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
+
   }
 
   .loading-anime-line {
@@ -201,11 +223,11 @@ th,td {
 
   @keyframes example {
     0% {
-      transform: scale(0, 1); 
+      transform: scale(0, 1);
     }
 
     100% {
-      transform: scale(1, 1); 
+      transform: scale(1, 1);
     }
   }
 }
@@ -226,39 +248,38 @@ th,td {
     visibility: visible;
     z-index: 10;
     opacity: 0.6;
-                }
+  }
 }
 
 // Followメニュー
 
 .follow-btn {
   position: fixed;
-bottom:100px;
-right: 0;
-opacity: 0;
-transform: translate(80px, 0);
-transition: all 0.5s;
+  bottom: 160px;
+  right: 0;
+  opacity: 0;
+  transform: translate(80px, 0);
+  transition: all 0.5s;
 
-@include tab{
-  bottom:60px;
-
-}
-
-&.active {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-&__item {
-  width: 80px;
-  display: block;
-
-  @include tab{
-    width: 60px;
-    
-
+  @include tab {
+    bottom: 60px;
   }
-}
+
+  &.active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  &__item {
+    width: 80px;
+    display: block;
+
+    @include tab {
+      width: 60px;
+
+
+    }
+  }
 }
 
 //スクロースしたら表示
@@ -320,7 +341,42 @@ transition: all 0.5s;
   }
 }
 
+// 画像を光らせる
+// .reflection-img{
+//   position    :relative;
+//   overflow    :hidden;
 
+//   &:after {
+//     content: "";
+//     display: block;
+//     width: 30px;
+//     height: 100%;
+//     position: absolute;
+//     top: -180px;
+//     left: 0;
+//     background-color: #FFF;
+//     opacity: 0;
+//     transform: rotate(45deg);
+//     animation: reflect 2s ease-in-out infinite;
+//     -webkit-transform: rotate(45deg);
+//     -webkit-animation: reflect 2s ease-in-out infinite;
+//   }
+// }
+
+
+
+// @keyframes reflect {
+//   0% { transform: scale(0) rotate(45deg); opacity: 0; }
+//   80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+//   81% { transform: scale(4) rotate(45deg); opacity: 1; }
+//   100% { transform: scale(50) rotate(45deg); opacity: 0; }
+// }
+// @-webkit-keyframes reflect {
+//   0% { transform: scale(0) rotate(45deg); opacity: 0; }
+//   80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+//   81% { transform: scale(4) rotate(45deg); opacity: 1; }
+//   100% { transform: scale(50) rotate(45deg); opacity: 0; }
+// }
 
 // エディター設定
 

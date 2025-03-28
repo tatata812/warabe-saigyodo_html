@@ -53,11 +53,13 @@ li {
   }
 }
 
-th, td {
+th,
+td {
   font-size: 16px;
 }
 @media (max-width: 820px) {
-  th, td {
+  th,
+  td {
     font-size: 14px;
   }
 }
@@ -144,6 +146,22 @@ th, td {
   max-width: 880px;
   margin: 0 auto;
 }
+.subpage__lead-wrap {
+  padding: 0 12px;
+}
+.subpage__lead {
+  text-align: center;
+}
+@media (max-width: 820px) {
+  .subpage__lead {
+    margin: 0 auto 24px;
+    max-width: 360px;
+    text-align: left;
+  }
+}
+.subpage__lead--margin {
+  margin: 0 auto 24px;
+}
 
 .loading-anime-wrap {
   position: fixed;
@@ -199,7 +217,7 @@ th, td {
 
 .follow-btn {
   position: fixed;
-  bottom: 100px;
+  bottom: 160px;
   right: 0;
   opacity: 0;
   transform: translate(80px, 0);
@@ -327,6 +345,149 @@ th, td {
   list-style: disc;
 }
 
+/* =================================
+おしながき
+ ================================= */
+.page-menu__item-wrap {
+  padding: 120px 12px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+@media (max-width: 820px) {
+  .page-menu__item-wrap {
+    padding: 40px 0px;
+  }
+}
+.page-menu__item {
+  display: flex;
+  margin: 0 0 60px;
+}
+@media (max-width: 820px) {
+  .page-menu__item {
+    flex-direction: column;
+  }
+}
+.page-menu__text-wrap {
+  width: 50%;
+  padding: 0 0 0 100px;
+}
+@media (max-width: 1120px) {
+  .page-menu__text-wrap {
+    padding: 0 0 0 40px;
+  }
+}
+@media (max-width: 820px) {
+  .page-menu__text-wrap {
+    width: 100%;
+    order: 1;
+    padding: 0 0 0 24px;
+  }
+}
+.page-menu__item-ttl {
+  font-size: 28px;
+  margin: 0 0 40px;
+}
+.page-menu__item-ttl-lead {
+  margin: -36px 0 40px;
+}
+.page-menu__menu-name {
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+.page-menu__menu-price {
+  margin: 0 0 40px;
+}
+.page-menu__menu-price--no-margin {
+  margin: 0;
+}
+.page-menu__img {
+  width: 50%;
+}
+@media (max-width: 820px) {
+  .page-menu__img {
+    width: 100%;
+    margin: 0 0 32px;
+  }
+}
+/* =================================
+アクセス
+ ================================= */
+.page-access__section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 12px 80px;
+}
+.page-access__map-wrap {
+  width: 100%;
+  margin: 0 auto 80px;
+}
+@media (max-width: 820px) {
+  .page-access__map-wrap {
+    margin: 0 auto 40px;
+  }
+}
+.page-access .map {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.page-access .map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page-access__text-wrap {
+  border-bottom: 1px solid #fff;
+  padding: 32px 0 16px;
+}
+.page-access__text-wrap--border-none {
+  border-bottom: none;
+}
+.page-access__text {
+  margin: 0 0 16px;
+}
+.page-access__text--bold {
+  font-weight: bold;
+}
+/* =================================
+アバウト
+ ================================= */
+.page-about__slider {
+  overflow: hidden;
+  margin: 60px 0 80px;
+}
+.page-about__section {
+  padding: 0 12px 80px;
+}
+.page-about__sp-img {
+  margin: 0 0 40px;
+}
+.page-about__table-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.page-about__table {
+  width: 100%;
+}
+.page-about__table tr {
+  border-top: 1px solid #fff;
+}
+.page-about__table tr:last-child {
+  border-bottom: 1px solid #fff;
+}
+.page-about__table th {
+  text-align: left;
+  padding: 16px 2px;
+  font-weight: 100;
+}
+.page-about__table td {
+  text-align: left;
+  padding: 16px 2px;
+}
 /* =================================
 会社概要・採用情報
  ================================= */
@@ -1027,7 +1188,7 @@ header
 footer
  ================================= */
 .footer {
-  background-color: #1C1C1C;
+  background: #000000;
   padding: 48px 12px;
 }
 @media (max-width: 820px) {
@@ -1037,9 +1198,14 @@ footer
   }
 }
 .footer__logo {
-  max-width: 60px;
+  max-width: 200px;
   display: block;
-  margin: 0 auto 28px;
+  margin: 0 auto 32px;
+}
+.footer__time {
+  text-align: center;
+  margin: 0 0 24px;
+  font-size: 14px;
 }
 .footer__link {
   display: flex;
@@ -1081,7 +1247,7 @@ footer
 .footer__menu-item {
   color: #fff;
   border-left: 1px solid #fff;
-  padding: 0 16px;
+  padding: 0 24px;
   font-size: 14px;
 }
 .footer__menu-item:first-child {

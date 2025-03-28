@@ -1,0 +1,259 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>おしながき</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <div class="black-bg"></div>
+
+  <header>
+    <div class="header">
+      <div class="header__inner">
+        <h1 class="header__ttl-wrap header__item"><a href="index.html" class="header__ttl"><img
+              src="assets/img/top/logo.png" alt=""></a>
+        </h1>
+        <nav class="header__menu-wrap header__item">
+          <div class="header__menu-inner">
+            <a href="" class="header__menu">おしながき</a>
+            <a href="" class="header__menu">わらべ菜魚洞とは</a>
+            <a href="" class="header__menu">アクセス</a>
+          </div>
+        </nav>
+      </div>
+      <div class="header-btn-wrap">
+        <div class="header-btn-wrap__btn-img" id="js-hamburger-menu">
+          <img src="assets/img/top/hun-btn.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu">
+          <a href="" class="header-sp__menu-item">わらべ菜魚洞</a>
+          <a href="" class="header-sp__menu-item">こじまわらべ</a>
+          <!-- <a href="" class="header-sp__menu-item">お弁当</a> -->
+          <a href="" class="header-sp__menu-item">ブログ</a>
+          <a href="company.html" class="header-sp__menu-item">会社概要・採用情報</a>
+          <!-- <a href="" class="header-sp__menu-item">個人情報保護方針</a>
+            <a href="" class="header-sp__menu-item">サイトマップ</a> -->
+        </div>
+        <div class="header-sp__link">
+          <a href="" class="header-sp__link-item"><img src="assets/img/top/footer-insta.png"
+              alt="Instagramロゴ"><span>わらべ菜魚洞公式</span></a>
+          <a href="" class="header-sp__link-item"><img src="assets/img/top/footer-insta.png"
+              alt="Instagramロゴ"><span>こじまわらべ公式</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    <div class="main page-company subpage">
+      <div class="subpage__main-visual">
+        <img src="assets/img/subpage/menu-mv.jpg" alt="おしながき" class="pc-block">
+        <img src="assets/img/subpage/menu-mv-sp.jpg" alt="おしながき" class="sp-block">
+      </div>
+      <h1 class="ttl-style"><span>Menu</span>おしながき</h1>
+      <p class="subpage__lead">わらべでは小田原港のセリに参加し、毎朝最高鮮度のお魚を大量に運び込み、<br>
+        お昼までにさまざまなお料理にしてご提供します。</p>
+
+
+      <section class="page-menu__item-wrap">
+        <div class="page-menu__item">
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl">朝獲れ日替わり</h2>
+            <p class="page-menu__menu-name">本日の海まかせ膳</p>
+            <p class="page-menu__menu-price">2,680円(税込2,948円)（平日限定）<br>
+              2,800円(税込3,080円)（土日限定）</p>
+            <p class="page-menu__menu-name">定食 各種</p>
+            <p class="page-menu__menu-price">1,600円(税込1,780円)〜</p>
+            <p class="page-menu__menu-name">丼 各種</p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin">800円</p>
+          </div>
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni01.jpg" alt="朝獲れ日替わり">
+          </div>
+        </div>
+
+        <div class="page-menu__item">
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni02.jpg" alt="お刺身">
+          </div>
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl">お刺身</h2>
+            <p class="page-menu__item-ttl-lead">定番から希少魚まで本日のお刺身</p>
+            <p class="page-menu__menu-name">選べる二種盛</p>
+            <p class="page-menu__menu-price">1,380円(税込1,518円)</p>
+            <p class="page-menu__menu-name">選べる三種盛</p>
+            <p class="page-menu__menu-price">1,900円(税込2,090円)</p>
+            <p class="page-menu__menu-name">大桶刺身定食</p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin">2,980円(税込3,278円)</p>
+          </div>
+
+        </div>
+
+        <div class="page-menu__item">
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl">海鮮丼</h2>
+            <p class="page-menu__menu-name">海の幸五彩丼</p>
+            <p class="page-menu__menu-price">2,600円(税込2,860円)</p>
+            <p class="page-menu__menu-name">五彩丼フライセット</p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin">3,400円(税込3,740円)</p>
+          </div>
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni03.jpg" alt="海鮮丼">
+          </div>
+        </div>
+
+        <div class="page-menu__item">
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni04.jpg" alt="天ぷら・天丼">
+          </div>
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl">天ぷら・天丼</h2>
+            <p class="page-menu__menu-name">巨海老天丼</p>
+            <p class="page-menu__menu-price">2,650円(税込2,915円)</p>
+            <p class="page-menu__menu-name">驚き天丼</p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin">3,700円(税込4,070円)</p>
+          </div>
+        </div>
+
+        <div class="page-menu__item">
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl">フライ</h2>
+            <p class="page-menu__menu-name">大エビとカニコロと<br>
+              地魚のミックスフライ</p>
+            <p class="page-menu__menu-price">1,880円(税込2,068円)</p>
+            <p class="page-menu__menu-name">金目鯛煮付</p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin">1,800円(税込1,980円)</p>
+          </div>
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni05.jpg" alt="フライ">
+          </div>
+        </div>
+
+        <div class="page-menu__item">
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni01.jpg" alt="焼物">
+          </div>
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl">焼物</h2>
+            <p class="page-menu__menu-name">マグロほほステーキ</p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin">1,980円(税込2,178円)</p>
+          </div>
+        </div>
+
+
+        <!-- <div class="page-menu__item">
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl"></h2>
+            <p class="page-menu__menu-name"></p>
+            <p class="page-menu__menu-price"></p>
+            <p class="page-menu__menu-name"></p>
+            <p class="page-menu__menu-price"></p>
+            <p class="page-menu__menu-name"></p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin"></p>
+          </div>
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni01.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="page-menu__item">
+          <div class="page-menu__img">
+            <img src="assets/img/subpage/meni01.jpg" alt="">
+          </div>
+          <div class="page-menu__text-wrap">
+            <h2 class="page-menu__item-ttl"></h2>
+            <p class="page-menu__menu-name"></p>
+            <p class="page-menu__menu-price"></p>
+            <p class="page-menu__menu-name"></p>
+            <p class="page-menu__menu-price"></p>
+            <p class="page-menu__menu-name"></p>
+            <p class="page-menu__menu-price page-menu__menu-price--no-margin"></p>
+          </div>
+        </div> -->
+
+      </section>
+    </div>
+
+
+
+  <!--main end-->
+
+
+  <footer class="footer">
+    <a class="footer__logo">
+      <img src="assets/img/top/logo.png" alt="わらべ">
+    </a>
+    <div class="footer__time">
+      営業時間<br>
+      11:30 - 14:00 L.O / 17:00 - 20:30 L.O
+    </div>
+    <div class="footer__time">
+      定休日<br>
+      水曜日の夕方の部
+    </div>
+    <div class="footer__link">
+      <a href="" class="footer__link-item"><img src="assets/img/top/footer-insta.png"
+          alt="Instagramロゴ"><span>わらべ菜魚洞公式</span></a>
+
+    </div>
+    <div class="footer__menu">
+      <a href="" class="footer__menu-item">わらべグループ</a>
+      <a href="" class="footer__menu-item">こじまわらべ</a>
+      <a href="company.html" class="footer__menu-item">会社概要・採用情報</a>
+
+    </div>
+    <div class="footer__bottom">
+      &copy;Warabe Co., Ltd All Rights Reserved.
+    </div>
+
+  </footer>
+  <div class="follow-btn follow-btn-js">
+    <a href="#" class="follow-btn__item"><img src="assets/img/top/follow-btn02.png" alt="こじまわらべ" /></a>
+  </div>
+
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
+</html>

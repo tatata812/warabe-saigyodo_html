@@ -482,7 +482,7 @@ footer
  ================================= */
 
 .footer {
-  background-color: #1C1C1C;
+  background:  #000000;
   padding: 48px 12px;
 
   &__inner {
@@ -494,11 +494,18 @@ footer
 
 
   &__logo {
-    max-width: 60px;
+    max-width: 200px;
     display: block;
-    margin: 0 auto 28px;
+    margin: 0 auto 32px;
   }
 
+
+  &__time {
+    text-align: center;
+    margin: 0 0 24px;
+    font-size: 14px;
+
+  }
   &__link {
     display: flex;
     justify-content: center;
@@ -545,7 +552,7 @@ footer
   &__menu-item {
     color: #fff;
     border-left: 1px solid #fff;
-    padding: 0 16px;
+    padding: 0 24px;
     font-size: 14px;
 
     &:first-child {
