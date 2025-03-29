@@ -114,7 +114,7 @@ $('.carousel-js').slick({
     {
       breakpoint: 750,
       settings: {
-        slidesToShow: 3, // 画面幅750px以下でスライド3枚表示
+        slidesToShow: 2, // 画面幅750px以下でスライド3枚表示
       }
     }
   ]
