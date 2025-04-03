@@ -341,42 +341,47 @@ td {
   }
 }
 
-// 画像を光らせる
-// .reflection-img{
-//   position    :relative;
-//   overflow    :hidden;
+// トップアニメーション
+ .topAnimation {
+  animation-name: topAnimation;
+  animation-fill-mode: backwards;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-delay: 0.2s;
+  animation-direction: normal;
+}
 
-//   &:after {
-//     content: "";
-//     display: block;
-//     width: 30px;
-//     height: 100%;
-//     position: absolute;
-//     top: -180px;
-//     left: 0;
-//     background-color: #FFF;
-//     opacity: 0;
-//     transform: rotate(45deg);
-//     animation: reflect 2s ease-in-out infinite;
-//     -webkit-transform: rotate(45deg);
-//     -webkit-animation: reflect 2s ease-in-out infinite;
-//   }
-// }
+@keyframes topAnimation {
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
 
+// トップアニメーション
+.topAnimation02 {
+  animation-name: topAnimation;
+  animation-fill-mode: backwards;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-delay: 0.8s;
+  animation-direction: normal;
+}
 
-// @keyframes reflect {
-//   0% { transform: scale(0) rotate(45deg); opacity: 0; }
-//   80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
-//   81% { transform: scale(4) rotate(45deg); opacity: 1; }
-//   100% { transform: scale(50) rotate(45deg); opacity: 0; }
-// }
-// @-webkit-keyframes reflect {
-//   0% { transform: scale(0) rotate(45deg); opacity: 0; }
-//   80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
-//   81% { transform: scale(4) rotate(45deg); opacity: 1; }
-//   100% { transform: scale(50) rotate(45deg); opacity: 0; }
-// }
+@keyframes topAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 // エディター設定
 
