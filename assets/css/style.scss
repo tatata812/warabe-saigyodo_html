@@ -326,18 +326,21 @@ header
   }
 
   &__img {
-    max-width: 380px;
+    max-width: 340px;
     margin: 0 0 32px 120px;
 
     @include tab {
-      max-width: 320px;
-      margin: 0 0 20px 24px;
+      max-width: 300px;
+      margin: 0 0 20px 40px;
     }
 
     &:last-child {
+      max-width: 320px;
       margin: 0;
 
       @include tab {
+        max-width: 300px;
+
         margin: 0 64px 0 0;
       }
     }

@@ -1106,20 +1106,22 @@ header
   }
 }
 .top-section01__img {
-  max-width: 380px;
+  max-width: 340px;
   margin: 0 0 32px 120px;
 }
 @media (max-width: 820px) {
   .top-section01__img {
-    max-width: 320px;
-    margin: 0 0 20px 24px;
+    max-width: 300px;
+    margin: 0 0 20px 40px;
   }
 }
 .top-section01__img:last-child {
+  max-width: 320px;
   margin: 0;
 }
 @media (max-width: 820px) {
   .top-section01__img:last-child {
+    max-width: 300px;
     margin: 0 64px 0 0;
   }
 }
