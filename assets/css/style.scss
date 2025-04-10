@@ -109,6 +109,8 @@ header
       position: relative;
     }
   }
+
+
 }
 
 .header-btn-wrap {
@@ -265,7 +267,20 @@ header
 
   }
 
-  &__ {}
+
+  &__aji {
+    width: 360px;
+    height: 640px;
+    background: url(../img/top/aji-landscape.png) no-repeat;
+    background-size: 10800px 640px;
+    animation: 1s walk steps(30) infinite;
+     margin: 0 auto;
+  }
+  @keyframes walk {
+    to {
+        background-position: -10800px;
+    }
+}
 
 }
 
