@@ -101,10 +101,10 @@
     var scrollTop = window.scrollY;
 
     var imageNumber;
-    if (scrollTop >= 300) {
+    if (scrollTop >= 200) {
       imageNumber = 30;
     } else {
-      imageNumber = Math.ceil((scrollTop / 300) * 30);
+      imageNumber = Math.ceil((scrollTop / 200) * 30);
       if (imageNumber < 1) imageNumber = 1;
     }
 
