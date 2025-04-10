@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>スクロールで画像切り替え（細かい版）</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      height: 5000px; /* スクロール用に高さを大きく */
+      margin: 0;
+      padding: 0;
+    }
+    .image-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .image-container img {
+      width: 400px;
+      height: auto;
+      display: none;
+    }
+    .image-container img.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <img src="assets/img/test/aji_0000.png" class="active" alt="Image 1" />
+    <img src="assets/img/test/aji_00001.png" alt="Image 2" />
+    <img src="assets/img/test/aji_00002.png" alt="Image 3" />
+    <img src="assets/img/test/aji_00003.png" alt="Image 4" />
+    <img src="assets/img/test/aji_00004.png" alt="Image 4" />
+    <img src="assets/img/test/aji_00005.png" alt="Image 4" />
+    <img src="assets/img/test/aji_0000.png" class="active" alt="Image 1" />
+    <img src="assets/img/test/aji_00001.png" alt="Image 2" />
+    <img src="assets/img/test/aji_00002.png" alt="Image 3" />
+    <img src="assets/img/test/aji_00003.png" alt="Image 4" />
+    <img src="assets/img/test/aji_00004.png" alt="Image 4" />
+    <img src="assets/img/test/aji_00005.png" alt="Image 4" />
+  </div>
+
+  <script>
+    $(window).on('scroll', function() {
+      const scrollTop = $(window).scrollTop();
+      const docHeight = $(document).height() - $(window).height();
+      const scrollPercent = scrollTop / docHeight;
+
+      const totalFrames = $('.image-container img').length;
+      const currentFrame = Math.floor(scrollPercent * (totalFrames - 1));
+
+      $('.image-container img').removeClass('active');
+      $('.image-container img').eq(currentFrame).addClass('active');
+    });
+  </script>
+
+</body>
+</html>
