@@ -283,11 +283,11 @@ header
 }
 
 &__aji-img {
-  max-width: 420px;
+  max-width: 500px;
   margin: 0 auto 24px;
 
   @include tab {
-    max-width: 220px;
+    max-width: 240px;
     margin: 0 auto 32px;
 
   }
