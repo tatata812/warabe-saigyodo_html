@@ -95,53 +95,83 @@
         <img id="change-image" src="assets/img/top/aji1.png" alt="アジフライ">
       </div>
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-  // スクロールで画像切り替え
-  window.addEventListener('scroll', function () {
-    var scrollTop = window.scrollY;
-
-    var imageNumber;
-    if (scrollTop >= 200) {
-      imageNumber = 30;
-    } else {
-      imageNumber = Math.ceil((scrollTop / 200) * 30);
-      if (imageNumber < 1) imageNumber = 1;
+    document.addEventListener('DOMContentLoaded', function () {
+  // ===== 画像プリロード =====
+  function preloadImages() {
+    for (let i = 1; i <= 30; i++) {
+      const img = new Image();
+      img.src = 'assets/img/top/aji' + i + '.png';
     }
+  }
+  preloadImages();
 
-    var imageElement = document.getElementById('change-image');
+  // ===== スクロールで画像切り替え =====
+  function throttle(fn, wait) {
+    let lastTime = 0;
+    return function () {
+      const now = Date.now();
+      if (now - lastTime >= wait) {
+        fn();
+        lastTime = now;
+      }
+    };
+  }
+
+  const changeImageOnScroll = throttle(function () {
+    const scrollTop = window.scrollY;
+    const imageNumber = scrollTop >= 300
+      ? 30
+      : Math.max(1, Math.ceil((scrollTop / 300) * 30));
+
+    const imageElement = document.getElementById('change-image');
     if (imageElement) {
       imageElement.src = 'assets/img/top/aji' + imageNumber + '.png';
     }
-  });
+  }, 100); // 100msごとに実行
 
-  // カルーセル処理 (Slickを使わない場合の純粋なバニラJS実装)
+  window.addEventListener('scroll', changeImageOnScroll);
+
+  // ===== カルーセル実装 =====
   const carousel = document.querySelector('.carousel-js');
+
   if (carousel) {
-    const speed = 5000;
-    const slidesToShow = window.innerWidth <= 750 ? 2 : 4;
-    const slideWidth = carousel.offsetWidth / slidesToShow;
+    const updateCarousel = () => {
+      const slidesToShow = window.innerWidth <= 750 ? 2 : 4;
+      const slideWidth = carousel.offsetWidth / slidesToShow;
 
-    let position = 0;
-
-    // 複製してループさせる
-    const slides = Array.from(carousel.children);
-    slides.forEach(slide => {
-      const clone = slide.cloneNode(true);
-      carousel.appendChild(clone);
-    });
-
-    function animateCarousel() {
-      position -= 1;
-      if (Math.abs(position) >= slideWidth * slides.length) {
-        position = 0;
+      // スライド複製 (初回のみ)
+      if (!carousel.dataset.cloned) {
+        const slides = Array.from(carousel.children);
+        slides.forEach(slide => {
+          const clone = slide.cloneNode(true);
+          carousel.appendChild(clone);
+        });
+        carousel.dataset.cloned = 'true';
       }
-      carousel.style.transform = `translateX(${position}px)`;
-      requestAnimationFrame(animateCarousel);
-    }
 
-    animateCarousel();
+      let position = 0;
+
+      function animate() {
+        position -= 1;
+        const totalWidth = carousel.scrollWidth / 2; // 元の長さ分でループ
+        if (Math.abs(position) >= totalWidth) {
+          position = 0;
+        }
+        carousel.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    };
+
+    // 初回実行
+    updateCarousel();
+
+    // 画面リサイズ時も対応
+    window.addEventListener('resize', updateCarousel);
   }
 });
+
       </script>
       <!-- <div class="main-visual__img topAnimation">
         <img src="assets/img/top/ajihurai.png" alt="アジフライ">
