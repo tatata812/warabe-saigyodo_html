@@ -1098,16 +1098,16 @@ header
   }
 }
 .main-visual__aji {
-  width: 360px;
-  height: 640px;
+  width: 300px;
+  height: 600px;
   background: url(../img/top/aji-landscape_2.png) no-repeat;
-  background-size: 10800px 640px;
+  background-size: 9000px 600px;
   animation: 1s walk steps(30) infinite;
   margin: 0 auto;
 }
 @keyframes walk {
   to {
-    background-position: -10800px;
+    background-position: -9000px;
   }
 }
 
