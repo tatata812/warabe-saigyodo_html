@@ -106,10 +106,10 @@ $(window).on('scroll', function() {
   // 画像番号の初期値
   var imageNumber;
 
-  if (scrollTop >= 200) {
+  if (scrollTop >= 300) {
     imageNumber = 30; // 100px以上スクロールしたら30で固定
   } else {
-    imageNumber = Math.ceil((scrollTop / 200) * 30);
+    imageNumber = Math.ceil((scrollTop / 300) * 30);
     if (imageNumber < 1) imageNumber = 1; // 念のため最低値
   }
 
