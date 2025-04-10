@@ -98,7 +98,7 @@
     document.addEventListener('DOMContentLoaded', function () {
   // ===== 画像プリロード =====
   function preloadImages() {
-    for (let i = 1; i <= 30; i++) {
+    for (let i = 1; i <= 29; i++) {
       const img = new Image();
       img.src = 'assets/img/top/aji' + i + '.png';
     }
@@ -120,8 +120,8 @@
   const changeImageOnScroll = throttle(function () {
     const scrollTop = window.scrollY;
     const imageNumber = scrollTop >= 300
-      ? 30
-      : Math.max(1, Math.ceil((scrollTop / 300) * 30));
+      ? 29
+      : Math.max(1, Math.ceil((scrollTop / 300) * 29));
 
     const imageElement = document.getElementById('change-image');
     if (imageElement) {
