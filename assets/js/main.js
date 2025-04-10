@@ -67,9 +67,9 @@ $(function () {
       }
     });
   });
-  
 
-  $(window).scroll(function() {
+
+  $(window).scroll(function () {
     // 要素の位置を取得
     var targetTop = $(".follow-btn-js").offset().top;
     // 要素の上端が画面上端から 200px 以上離れているかどうかを確認
@@ -97,28 +97,48 @@ $(function () {
     });
   });
 
-})
+
+// アジフライアニメーション 
+
+$(window).on('scroll', function() {
+  var scrollTop = $(this).scrollTop();
+
+  // 画像番号の初期値
+  var imageNumber;
+
+  if (scrollTop >= 200) {
+    imageNumber = 30; // 100px以上スクロールしたら30で固定
+  } else {
+    imageNumber = Math.ceil((scrollTop / 200) * 30);
+    if (imageNumber < 1) imageNumber = 1; // 念のため最低値
+  }
+
+  $('#change-image').attr('src', 'assets/img/top/aji' + imageNumber + '.png');
+});
 
 
-$('.carousel-js').slick({
-  autoplay: true, // 自動でスクロール
-  autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
-  speed: 5000, // スライドが流れる速度を設定
-  cssEase: "linear", // スライドの流れ方を等速に設定
-  slidesToShow: 4, // 表示するスライドの数
-  swipe: false, // 操作による切り替えはさせない
-  arrows: false, // 矢印非表示
-  pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
-  pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
-  responsive: [
-    {
+  $('.carousel-js').slick({
+    autoplay: true, // 自動でスクロール
+    autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+    speed: 5000, // スライドが流れる速度を設定
+    cssEase: "linear", // スライドの流れ方を等速に設定
+    slidesToShow: 4, // 表示するスライドの数
+    swipe: false, // 操作による切り替えはさせない
+    arrows: false, // 矢印非表示
+    pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
+    pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+    responsive: [{
       breakpoint: 750,
       settings: {
         slidesToShow: 2, // 画面幅750px以下でスライド3枚表示
       }
-    }
-  ]
-});
+    }]
+  });
+
+})
+
+
+
 
 // パララックス
 

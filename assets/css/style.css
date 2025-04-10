@@ -1110,6 +1110,16 @@ header
     background-position: -9000px;
   }
 }
+.main-visual__aji-img {
+  max-width: 360px;
+  margin: 0 auto 64px;
+}
+@media (max-width: 820px) {
+  .main-visual__aji-img {
+    max-width: 220px;
+    margin: 0 auto 32px;
+  }
+}
 
 .top-section01 {
   position: relative;

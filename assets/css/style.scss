@@ -282,6 +282,17 @@ header
     }
 }
 
+&__aji-img {
+  max-width: 360px;
+  margin: 0 auto 64px;
+
+  @include tab {
+    max-width: 220px;
+    margin: 0 auto 32px;
+
+  }
+}
+
 }
 
 
