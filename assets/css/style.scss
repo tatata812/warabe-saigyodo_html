@@ -210,7 +210,7 @@ header
  ================================= */
 // メインビジュアル
 .main-visual {
-  padding: 80px 12px;
+  padding: 60px 12px;
   text-align: center;
 
   @include tab {
@@ -283,8 +283,8 @@ header
 }
 
 &__aji-img {
-  max-width: 360px;
-  margin: 0 auto 64px;
+  max-width: 420px;
+  margin: 0 auto 24px;
 
   @include tab {
     max-width: 220px;
