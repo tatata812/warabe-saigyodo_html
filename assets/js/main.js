@@ -1,3 +1,82 @@
+// アジフライ
+document.addEventListener('DOMContentLoaded', function () {
+// ===== 画像プリロード =====
+function preloadImages() {
+for (let i = 1; i <= 29; i++) {
+  const img = new Image();
+  img.src = 'assets/img/top/aji' + i + '.png';
+}
+}
+preloadImages();
+
+// ===== スクロールで画像切り替え =====
+function throttle(fn, wait) {
+let lastTime = 0;
+return function () {
+  const now = Date.now();
+  if (now - lastTime >= wait) {
+    fn();
+    lastTime = now;
+  }
+};
+}
+
+const changeImageOnScroll = throttle(function () {
+const scrollTop = window.scrollY;
+const imageNumber = scrollTop >= 300
+  ? 29
+  : Math.max(1, Math.ceil((scrollTop / 300) * 29));
+
+const imageElement = document.getElementById('change-image');
+if (imageElement) {
+  imageElement.src = 'assets/img/top/aji' + imageNumber + '.png';
+}
+}, 100); // 100msごとに実行
+
+window.addEventListener('scroll', changeImageOnScroll);
+
+// ===== カルーセル実装 =====
+const carousel = document.querySelector('.carousel-js');
+
+if (carousel) {
+const updateCarousel = () => {
+  const slidesToShow = window.innerWidth <= 750 ? 2 : 4;
+  const slideWidth = carousel.offsetWidth / slidesToShow;
+
+  // スライド複製 (初回のみ)
+  if (!carousel.dataset.cloned) {
+    const slides = Array.from(carousel.children);
+    slides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      carousel.appendChild(clone);
+    });
+    carousel.dataset.cloned = 'true';
+  }
+
+  let position = 0;
+
+  function animate() {
+    position -= 1;
+    const totalWidth = carousel.scrollWidth / 2; // 元の長さ分でループ
+    if (Math.abs(position) >= totalWidth) {
+      position = 0;
+    }
+    carousel.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+};
+
+// 初回実行
+updateCarousel();
+
+// 画面リサイズ時も対応
+window.addEventListener('resize', updateCarousel);
+}
+});
+
+
 $(function () {
 
   $("#js-hamburger-menu, .navigation__link").click(function () {
@@ -96,25 +175,6 @@ $(function () {
       return false;
     });
   });
-
-
-// アジフライアニメーション 
-
-// $(window).on('scroll', function() {
-//   var scrollTop = $(this).scrollTop();
-
-//   // 画像番号の初期値
-//   var imageNumber;
-
-//   if (scrollTop >= 300) {
-//     imageNumber = 30; // 100px以上スクロールしたら30で固定
-//   } else {
-//     imageNumber = Math.ceil((scrollTop / 300) * 30);
-//     if (imageNumber < 1) imageNumber = 1; // 念のため最低値
-//   }
-
-//   $('#change-image').attr('src', 'assets/img/top/aji' + imageNumber + '.png');
-// });
 
 
   $('.carousel-js').slick({
