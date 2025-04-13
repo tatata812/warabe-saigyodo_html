@@ -337,6 +337,7 @@ header
 
   &__text {
     margin: 0 0 32px;
+    white-space: nowrap;
 
     &:last-child {
       margin: 0;
