@@ -342,7 +342,7 @@ td {
 }
 
 // トップアニメーション
- .topAnimation {
+ .topAnimation,.topAnimation03 {
   animation-name: topAnimation;
   animation-fill-mode: backwards;
   animation-duration: 4s;
@@ -385,7 +385,7 @@ td {
 
 // トップアニメーション　ふきだし
 .step01 {
-  animation: step01 2s ease-in-out infinite;
+  animation: step01 5s ease-in-out infinite;
 }
 @keyframes step01 {
   0% {
@@ -406,7 +406,7 @@ td {
 }
 
 .step02 {
-  animation: step02 2s ease-in-out infinite;
+  animation: step02 5s ease-in-out infinite;
 }
 @keyframes step02 {
   0% {

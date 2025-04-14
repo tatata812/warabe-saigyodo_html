@@ -149,6 +149,18 @@ $(function () {
 
 
   $(window).scroll(function () {
+    $('.fadein-anime03,.fadein-anime04').each(function () {
+      var pos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var wHeight = $(window).height();
+      if (scroll > pos - wHeight + wHeight / 200) {
+        $(this).addClass('active');
+      }
+    });
+  });
+
+
+  $(window).scroll(function () {
     // 要素の位置を取得
     var targetTop = $(".follow-btn-js").offset().top;
     // 要素の上端が画面上端から 200px 以上離れているかどうかを確認
@@ -178,24 +190,41 @@ $(function () {
 
 
 
-  $('.about-slider-js').slick({
-    autoplay: true, // 自動でスクロール
-    autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
-    speed: 5000, // スライドが流れる速度を設定
-    cssEase: "linear", // スライドの流れ方を等速に設定
-    slidesToShow: 2, // 表示するスライドの数
-    swipe: false, // 操作による切り替えはさせない
-    arrows: false, // 矢印非表示
-    pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
-    pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
-    responsive: [
-      {
-        breakpoint: 750,
-        settings: {
-          slidesToShow: 2, // 画面幅750px以下でスライド3枚表示
-        }
+  // アバウトスライダー
+
+  $(function () {
+    const $slider = $('.about-slider-js');
+  
+    // 初期化
+    $slider.slick({
+      centerMode: true,
+      centerPadding: '25%',
+      slidesToShow: 1,
+      infinite: true,
+      speed: 7000, // 流れる速さ（急停止するので適度に速く）
+      autoplay: true,
+      autoplaySpeed: 0, // 自動再生の間隔なし
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      cssEase: 'linear', // 一定速度で流す
+    });
+  
+    // 初回スタート
+    let isPaused = false;
+  
+    // スライド移動後イベント
+    $slider.on('afterChange', function () {
+      if (!isPaused) {
+        isPaused = true;
+        $slider.slick('slickPause'); // ピタッと停止
+        setTimeout(function () {
+          $slider.slick('slickPlay'); // 再開
+          isPaused = false;
+        }, 3000); // 3秒停止
       }
-    ]
+    });
   });
 
 
