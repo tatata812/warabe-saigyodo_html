@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 // ===== 画像プリロード =====
 function preloadImages() {
-for (let i = 1; i <= 29; i++) {
+for (let i = 0; i <= 29; i++) {
   const img = new Image();
   img.src = 'assets/img/top/aji' + i + '.png';
 }
