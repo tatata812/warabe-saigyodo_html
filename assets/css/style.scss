@@ -109,8 +109,6 @@ header
       position: relative;
     }
   }
-
-
 }
 
 .header-btn-wrap {
@@ -129,7 +127,6 @@ header
     width: 32px;
   }
 }
-
 
 
 .header-sp {
@@ -176,7 +173,6 @@ header
     gap: 10px;
     color: #fff;
 
-
     img {
       width: 24px;
     }
@@ -193,14 +189,10 @@ header
     align-items: flex-end;
     gap: 8px;
     margin: 0 0 24px;
-
-
-
   }
 
   &__menu-item {
     color: #fff;
-
   }
 }
 
@@ -216,9 +208,7 @@ header
   @include tab {
     text-align: left;
     padding: 24px 12px;
-
   }
-
 
   &__top-text {
     font-size: 36px;
@@ -228,9 +218,7 @@ header
       text-align: center;
       font-size: 24px;
       margin: 0 0 24px;
-
     }
-
   }
 
   &__img {
@@ -240,7 +228,6 @@ header
     @include tab {
       max-width: 120px;
       margin: 0 auto 32px;
-
     }
   }
 
@@ -252,13 +239,11 @@ header
       font-size: 22px;
       margin: -50px 0 32px;
       text-align: center;
-
     }
   }
 
   &__lead-text {
     margin: 0 0 24px;
-
 
     @include tab {
       margin: 0 auto 24px;
@@ -268,22 +253,20 @@ header
   }
 
 
-&__aji-img {
-  max-width: 800px;
-  margin: 0 auto 24px;
+  &__aji-img {
+    max-width: 800px;
+    margin: 0 auto 24px;
 
-  @include pc{
-    max-width: 500px;
-  margin: 0 auto 24px;
+    @include pc {
+      max-width: 500px;
+      margin: 0 auto 24px;
+    }
+
+    @include tab {
+      max-width: 240px;
+      margin: 0 auto 32px;
+    }
   }
-
-  @include tab {
-    max-width: 240px;
-    margin: 0 auto 32px;
-
-  }
-}
-
 }
 
 
@@ -294,7 +277,6 @@ header
 
   @include tab {
     padding: 0 0 40px;
-
   }
 
   &__top-img {
@@ -302,7 +284,6 @@ header
 
     @include tab {
       margin: 0 0 40px;
-
     }
   }
 
@@ -362,7 +343,6 @@ header
         margin: 0 64px 0 0;
       }
     }
-
   }
 
   &__dec {
@@ -375,12 +355,6 @@ header
       width: 160px;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 }
 
 .top-section02 {
@@ -390,10 +364,7 @@ header
 
   @include tab {
     padding: 0 0 40px;
-
   }
-
-  &__top-img {}
 
   &__text-wrap {
     position: relative;
@@ -439,11 +410,9 @@ header
     width: 260px;
 
     @include tab {
-display: none;      
+      display: none;
     }
   }
-
-
 
   &__inner {
     position: relative;
@@ -451,23 +420,11 @@ display: none;
 
     @include tab {
       padding: 40px 0 0;
-
     }
   }
-
- 
-
-  &__ {}
-
-  &__ {}
 }
 
 .top-section03 {
-
-
-
-
-  &__top-img {}
 
   &__text-wrap {
     position: relative;
@@ -507,20 +464,14 @@ display: none;
   }
 
 
-
-
   &__inner {
     position: relative;
     padding: 80px 0;
 
     @include tab {
       padding: 40px 0;
-
     }
   }
-
-  &__bottom-img {}
-
 
   &__dec-bottom {
     position: absolute;
@@ -532,37 +483,7 @@ display: none;
       width: 160px;
     }
   }
-
-  &__ {}
-
-  &__ {}
 }
-.top-section01 {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-}
-
-
-
-
 
 
 /* =================================
@@ -580,33 +501,29 @@ footer
     }
   }
 
-
   &__logo {
     max-width: 200px;
     display: block;
     margin: 0 auto 32px;
   }
 
-
   &__time {
     text-align: center;
     margin: 0 0 24px;
     font-size: 14px;
-
   }
 
   &__link {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin: 0 0 24px;
+    margin: 0 0 40px;
 
     @include tab {
       flex-direction: column;
       align-items: center;
       gap: 12px;
     }
-
   }
 
   &__link-item {
@@ -615,8 +532,6 @@ footer
     gap: 10px;
     font-size: 14px;
 
-
-
     img {
       width: 24px;
     }
@@ -624,6 +539,11 @@ footer
     span {
       white-space: nowrap;
     }
+  }
+
+  &__tabelog {
+    max-width: 200px;
+    margin: 0 auto 24px;
   }
 
   &__menu {
@@ -650,7 +570,6 @@ footer
 
     @include tab {
       border-left: none;
-
     }
   }
 
